@@ -583,9 +583,9 @@ results.write()
 
 for variable in m.component_objects(Var, active=True):
     df = pd.DataFrame(variable.get_values().values(), index = variable.get_values().keys())
-    df.to_csv("monolithic_test_results/unlinked_hydro_{}-{}.csv".format(variable, case_name), index=True)
+    df.to_csv("Results/{}-{}.csv".format(variable, case_name), index=True)
     
-with open('monolithic_test_results/unlinked_hydro_results_{}.txt'.format(case_name), 'w') as f:
+with open('Results/Results_{}.txt'.format(case_name), 'w') as f:
     f.write(repr(results))
 
 
